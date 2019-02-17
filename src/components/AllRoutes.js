@@ -7,15 +7,12 @@ import { Switch, Route } from 'react-router-dom';
 
 const AllRoutes = () => {
 	return (
-		
-			<Switch>
-				<Route exact path="/" component={Posts} />
-
-				<Route exact path="/post/:id" component={Post} />
-				<Route exact path="/addPost" component={AddPost} />
-
-			</Switch>
-		
+		<Switch>
+			<Route exact path="/" component={Posts} />
+			<Route exact path="/post/:id" component={Post} />
+			<Route exact path="/addPost" component={AddPost} />
+			<Route exact path="/posts" component={Posts} />
+		</Switch>
 	);
 };
 export default AllRoutes;

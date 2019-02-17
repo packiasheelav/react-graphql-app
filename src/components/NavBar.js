@@ -6,6 +6,7 @@ export default class NavBar extends Component{
     return(
       <div>
           <Link to={`/addPost`}>Add Post</Link>
+          <Link to={`/posts`}>All Posts</Link>
       </div>
     )
   }
