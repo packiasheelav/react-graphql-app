@@ -22,6 +22,44 @@
 .App-link {
   color: #61dafb;
 }
+.button{
+  text-decoration:none;
+  background:#524763;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+  margin:5px 5px 5px 10px;
+  padding-top:10px;
+}
+.navBar{
+  background:rgb(106, 106, 104);
+  height:75px;
+  text-align:center;
+}
+
+input, textarea{
+  width:80%;
+  margin-bottom:1rem;
+  margin-left:2rem;
+}
+
+input{
+  font-size:1.6rem;
+}
+
+textarea{
+font-size:1.2rem;
+height:30vh;
+}
+.button2{
+  text-decoration:none;
+  background:#524763;
+  color:white;
+  padding:5px 10px;
+  border-radius:5px;
+  margin:5px 5px 5px 10px;
+  padding-top:10px;
+}
 
 @keyframes App-logo-spin {
   from {
