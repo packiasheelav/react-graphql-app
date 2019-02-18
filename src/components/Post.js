@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import UpdatePost from './UpdatePost';
+import UpdatePost from "./UpdatePost";
+import { isDeepStrictEqual } from "util";
 
 export default class Post extends Component {
   render() {
@@ -15,16 +16,19 @@ export default class Post extends Component {
       >
         {({ data, loading }) => {
           if (loading) return "Loading...";
-          const { post } = data;
+          const { post, isEditMode } = data;
           return (
             <div>
-          <section>
-          <h1>{post.title}</h1>
-          </section>
-          <section>
-            <UpdatePost post={post}/>
-          </section>
-          </div>
+              {isEditMode ? (
+                <section>
+                  <UpdatePost post={post} />
+                </section>
+              ) : (
+                <section>
+                  <h1>{post.title}</h1>
+                </section>
+              )}
+            </div>
           );
         }}
       </Query>
@@ -40,5 +44,6 @@ const POST_QUERY = gql`
       title
       body
     }
+    isEditMode @client
   }
 `;
